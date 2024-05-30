@@ -5,7 +5,7 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 <template>
     <AuthenticatedLayout>
         <!-- Title -->
-        <div class=" w-full h-screen bg-amber-200 flex align-middle">
+        <div style="background-color: rgb(245, 238, 230); background-image: url(/public/images/cosmetic.jpeg)" class=" bg-cover bg-center w-full h-screen bg-amber-200 flex align-middle">
             <div class=" mx-auto w-full max-w-[1120px] relative">
                 <div class=" flex flex-col absolute top-1/2 -translate-y-1/2 w-1/2 text-5xl font-thin">
                     <div class=" mb-4" >Natural Cosmetics for gentle skincare</div>
@@ -244,7 +244,7 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
                         view detail
                     </RouterLink>
                 </div>
-                <div class=" absolute rounded left-[47%] w-[45%] top-1/2 -translate-y-1/2 min-h-[70%] bg-black z-30"></div>
+                <div style="background-image: url(/public/images/individualcare.jpg);" class=" bg-cover bg-center absolute rounded left-[47%] w-[45%] top-1/2 -translate-y-1/2 min-h-[70%] bg-black z-30"></div>
             </div>
         </div>
         <!-- Comment -->
