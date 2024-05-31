@@ -3,6 +3,7 @@ import { useUsers } from '@/stores/user'
 import Welcome from '@/pages/Welcome.vue'
 import PageNotFound from '@/pages/errors/404.vue'
 import Dashboard from '@/pages/Dashboard.vue'
+import Shop from '@/pages/Shop.vue'
 import Login from '@/pages/auth/Login.vue'
 import Register from '@/pages/auth/Register.vue'
 import ForgotPassword from '@/pages/auth/ForgotPassword.vue'
@@ -51,6 +52,11 @@ const routes = [
             title: 'Dashboard',
             guard: 'auth',
         },
+    },
+    {
+        path: '/shop',
+        name: 'shop',
+        component: Shop,
     },
     {
         path: '/login',

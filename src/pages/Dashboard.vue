@@ -10,7 +10,7 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
                 <div class=" flex flex-col absolute top-1/2 -translate-y-1/2 w-1/2 text-5xl font-thin">
                     <div class=" mb-4" >Natural Cosmetics for gentle skincare</div>
                     <div>
-                        <RouterLink class=" text-lg font-medium p-1 px-3 border duration-300 border-neutral-400 hover:border-transparent">
+                        <RouterLink to="#" class=" text-lg font-medium p-1 px-3 border duration-300 border-neutral-400 hover:border-transparent">
                             shop now
                         </RouterLink>
                     </div>
@@ -24,31 +24,67 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
                     <div class=" absolute top-1/2 -translate-y-1/2">
                         <div class=" text-4xl font-thin mb-5">Best seller</div>
                         <div class=" text-lg mb-5" >A Wide range of face wash body care cosmetics that will not Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestiae repudiandae voluptate.</div>
-                        <RouterLink class=" text-lg p-1 px-3 border duration-300 border-neutral-400 hover:border-transparent">
+                        <RouterLink to="#"class=" text-lg p-1 px-3 border duration-300 border-neutral-400 hover:border-transparent">
                             view all
                         </RouterLink>
                     </div>
                 </div>
-                <div class=" w-2/3 flex justify-center flex-col p-3">
-                    <div class=" w-full flex justify-center flex-row" >
-                        <div class=" flex flex-col p-4 border mx-2">
-                            <div class="w-48 bg-black h-48">
+                <div class=" w-2/3 flex justify-center flex-col pl-3">
+                    <div id="scrolltinydiv" class=" scroll-smooth max-w-full flex justify-between gap-3 overflow-x-auto no-scrollbar" >
+                        <div class=" flex flex-col p-4 min-w-[32.2%] w-1/3 border ">
+                            <div class="w-full bg-black h-52">
                                 <img src="" alt="" srcset="">
                             </div>
                             <div class=" text-lg font-medium mb-2" >Face Wash</div>
                             <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
                             <div class=" mb-5">
-                                <RouterLink class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                <RouterLink to="#"class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                    view detail
+                                </RouterLink>
+                            </div>
+                        </div>
+                        <div class=" flex flex-col p-4 min-w-[32.2%] w-1/3 border ">
+                            <div class="w-full bg-black h-52">
+                                <img src="" alt="" srcset="">
+                            </div>
+                            <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                            <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                            <div class=" mb-5">
+                                <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                    view detail
+                                </RouterLink>
+                            </div>
+                        </div>
+                        <div class=" flex flex-col p-4 min-w-[32.2%] w-1/3 border ">
+                            <div class="w-full bg-black h-52">
+                                <img src="" alt="" srcset="">
+                            </div>
+                            <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                            <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                            <div class=" mb-5">
+                                <RouterLink to="#"class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                    view detail
+                                </RouterLink>
+                            </div>
+                        </div>
+                        <div class=" flex flex-col p-4 min-w-[32.2%] w-1/3 border ">
+                            <div class="w-full bg-black h-52">
+                                <img src="" alt="" srcset="">
+                            </div>
+                            <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                            <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                            <div class=" mb-5">
+                                <RouterLink to="#"class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
                                     view detail
                                 </RouterLink>
                             </div>
                         </div>
                     </div>
                     <div class=" w-full flex justify-center p-3">
-                        <button type="button" class=" p-2 bg-black mx-2">
+                        <button type="button" @click="scrolltinyToLeft" class=" p-2 bg-black mx-2">
                             <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" fill="white" points="9.414 12 16.707 19.293 15.293 20.707 6.586 12 15.293 3.293 16.707 4.707"/></svg>
                         </button>
-                        <button type="button" class=" p-2 bg-black mx-2">
+                        <button type="button" @click="scrolltinyToRight" class=" p-2 bg-black mx-2">
                             <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" fill="white" points="14.586 12 7.293 4.707 8.707 3.293 17.414 12 8.707 20.707 7.293 19.293"/></svg>
                         </button>
                     </div>
@@ -59,25 +95,85 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
         <div class=" w-full py-16">
             <div class=" flex flex-col mx-auto w-full max-w-[1120px] relative">
                 <div class=" text-2xl font-semibold mb-5">New Product</div>
-                <div class=" w-full flex justify-center flex-row" >
-                    <div class=" flex flex-col p-4 w-1/4 border mx-2">
+                <div id="scrollbigdiv" class=" max-w-full flex justify-between gap-4 overflow-x-auto no-scrollbar scroll-smooth" >
+                    <div class=" flex flex-col p-4 min-w-[23.9%] border">
                         <div class=" w-full bg-black h-56">
                             <img src="" alt="" srcset="">
                         </div>
                         <div class=" text-lg font-medium mb-2" >Face Wash</div>
                         <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
                         <div class=" mb-5">
-                            <RouterLink class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                            <RouterLink to="#"class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                view detail
+                            </RouterLink>
+                        </div>
+                    </div>
+                    <div class=" flex flex-col p-4 min-w-[23.9%] border">
+                        <div class=" w-full bg-black h-56">
+                            <img src="" alt="" srcset="">
+                        </div>
+                        <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                        <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                        <div class=" mb-5">
+                            <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                view detail
+                            </RouterLink>
+                        </div>
+                    </div>
+                    <div class=" flex flex-col p-4 min-w-[23.9%] border">
+                        <div class=" w-full bg-black h-56">
+                            <img src="" alt="" srcset="">
+                        </div>
+                        <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                        <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                        <div class=" mb-5">
+                            <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                view detail
+                            </RouterLink>
+                        </div>
+                    </div>
+                    <div class=" flex flex-col p-4 min-w-[23.9%] border">
+                        <div class=" w-full bg-black h-56">
+                            <img src="" alt="" srcset="">
+                        </div>
+                        <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                        <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                        <div class=" mb-5">
+                            <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                view detail
+                            </RouterLink>
+                        </div>
+                    </div>
+                    <div class=" flex flex-col p-4 min-w-[23.9%] border">
+                        <div class=" w-full bg-black h-56">
+                            <img src="" alt="" srcset="">
+                        </div>
+                        <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                        <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                        <div class=" mb-5">
+                            <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                                view detail
+                            </RouterLink>
+                        </div>
+                    </div>
+                    <div class=" flex flex-col p-4 min-w-[23.9%] border">
+                        <div class=" w-full bg-black h-56">
+                            <img src="" alt="" srcset="">
+                        </div>
+                        <div class=" text-lg font-medium mb-2" >Face Wash</div>
+                        <div class=" text-slate-500 text-sm mb-5" >Rp. 200.000</div>
+                        <div class=" mb-5">
+                            <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
                                 view detail
                             </RouterLink>
                         </div>
                     </div>
                 </div>
                 <div class=" w-full flex justify-center p-3">
-                    <button type="button" class=" p-2 bg-black mx-2">
+                    <button @click="scrollToLeft" type="button" class=" p-2 bg-black mx-2">
                         <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" fill="white" points="9.414 12 16.707 19.293 15.293 20.707 6.586 12 15.293 3.293 16.707 4.707"/></svg>
                     </button>
-                    <button type="button" class=" p-2 bg-black mx-2">
+                    <button @click="scrollToRight" type="button" class=" p-2 bg-black mx-2">
                         <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon fill-rule="evenodd" fill="white" points="14.586 12 7.293 4.707 8.707 3.293 17.414 12 8.707 20.707 7.293 19.293"/></svg>
                     </button>
                 </div>
@@ -229,7 +325,7 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
             <div class=" text-4xl font-thin mb-5">GET 10% DISCOUNT</div>
             <div class=" max-w-[40%] mb-5 mx-auto">Subcribe to the TheFace mailing list to receive update on mnew arrivals, special offers and other discount information.</div>
             <div class="mt-5">
-                <RouterLink class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
                     Subscribe
                 </RouterLink>
             </div>
@@ -240,7 +336,7 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
                 <div style="background-color: rgb(243, 215, 202);" class=" w-[52%] p-24 bg-rose-200 rounded">
                     <div class="mb-5 text-4xl font-thin">Individual care</div>
                     <div class=" mb-10 max-w-[90%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, recusandae in quasi possimus eum excepturi expedita autem, totam aliquam reprehenderit molestias tenetur. Omnis modi ea exercitationem natus suscipit vero et.</div>
-                    <RouterLink class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
+                    <RouterLink to="#" class=" text-base bg-black text-white p-2 px-3 border duration-300 border-neutral-400 hover:border-transparent rounded">
                         view detail
                     </RouterLink>
                 </div>
@@ -307,7 +403,50 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 
     export default {
         name: 'MyComponent',
+        mounted() {
+            // Memastikan elemen div telah dirender sebelum mencoba mengaksesnya
+            this.$nextTick(() => {
+                this.scrollableDiv = document.getElementById("scrollbigdiv");
+                this.scrollabletinyDiv = document.getElementById("scrolltinydiv");
+            });
+        },
+        methods: {
+            scrollToLeft() {
+                if (this.scrollableDiv) {
+                    const scrollDistance = this.scrollableDiv.clientWidth; // Scroll 20% dari lebar div ke kiri
+                    this.scrollableDiv.scrollLeft -= scrollDistance;
+                }
+            },
+            scrollToRight() {
+                if (this.scrollableDiv) {
+                    const scrollDistance = this.scrollableDiv.clientWidth; // Scroll 20% dari lebar div ke kanan
+                    this.scrollableDiv.scrollLeft += scrollDistance;
+                }
+            },
+            scrolltinyToLeft() {
+                if (this.scrollabletinyDiv) {
+                    const scrollDistance = this.scrollabletinyDiv.clientWidth; // Scroll 20% dari lebar div ke kiri
+                    this.scrollabletinyDiv.scrollLeft -= scrollDistance;
+                }
+            },
+            scrolltinyToRight() {
+                if (this.scrollabletinyDiv) {
+                    const scrollDistance = this.scrollabletinyDiv.clientWidth; // Scroll 20% dari lebar div ke kanan
+                    this.scrollabletinyDiv.scrollLeft += scrollDistance;
+                }
+            }
+        }
     }
 </script>
+<style>
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+</style>
 
 
